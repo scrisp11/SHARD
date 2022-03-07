@@ -28,8 +28,8 @@ for jh = 1:phi_tap.nh
             dxp = dxp + 1/511e3.*x./gamma.*(1-phi_tap.betantap(jh).*sqrt(gamma.^2-1)./gamma)*phi_tap.kntap(jh).*...
                 abs(phi_tap.Efft(jh)/phi_tap.nh).*cos(tp+(phi_tap.kntap(jh)-k).*z+angle(phi_tap.Efft(jh)));
         end
-        dgamma(abs(k_perp*x)>1) = 0;
-        dxp(abs(k_perp*x)>1) = 0;
+        dgamma(abs(x*k_perp)>phi_tap.aperture*max(real(k_perpM))) = 0;
+        dxp(abs(x*k_perp)>phi_tap.aperture*max(real(k_perpM))) = 0;
     end
 dtp = k*(1-gamma./sqrt(gamma.^2-1));
 dx = xp;
