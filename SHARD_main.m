@@ -5,7 +5,7 @@ close all
 % Shard Version 2022. Arbitrary on axis phase and amplitude profile
 % are Fourier-analyzed to generate a set of spatial harmonics to describe
 % the field in the DLA gap
-
+% Testing Github
 
 %% Input Parameters
 plots = true; %Set false to remove plots (for optimization loops) 
