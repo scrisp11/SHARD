@@ -46,4 +46,3 @@ for k=1:D-1 % dimensions
 end
 
 S = S';
-
