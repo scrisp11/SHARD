@@ -1,9 +1,9 @@
-function focus_new = aperture(focus_old,y,phi_tap)
+function focus_new = aperture(focus_old,y,struc)
 npart=size(y,2)/4;
 x = y(2*npart+1:npart*3);
 
 %% Aperture
-gapsize = phi_tap.aperture;
+gapsize = struc.gap;
 focus_new = focus_old.*(abs(x(1,:))<gapsize/2);
 
 end
